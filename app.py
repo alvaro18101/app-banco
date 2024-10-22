@@ -1,11 +1,28 @@
-# saldo=float(input("INGRESE SU SALDO: "))
-# deposito=float(input("INGRESE MONTO A DEPOSITAR: "))
+def depositarDinero():
+    while True:
+        saldo = input("Ingrese su saldo: ")
+        try:
+            saldo = float(saldo)
+            if saldo >= 0:
+                break
+        except:
+            pass
 
-def depositarDinero(saldo, deposito):
-    monto_final = saldo+deposito
-    return monto_final
+    while True:
+        deposito = input("Ingrese el monto a depositar: ")
+        try:
+            deposito = float(deposito)
+            if deposito > 0:
+                break
+        except:
+            pass
+    
+    saldo += deposito
 
-# print(depositarDinero(saldo, deposito))
+    print(f'Saldo actual: S/ {saldo}')
+    
+
+depositarDinero()
 
 def iniciarSesion():
     usuario0="0123456789"
@@ -17,4 +34,4 @@ def iniciarSesion():
     else:
         print("Ingreso exitoso")
 
-iniciarSesion()
+# iniciarSesion()
