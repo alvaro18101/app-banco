@@ -23,12 +23,12 @@ class persona:
         self.nombres=nombres
         self.apellidos=apellidos
         self.edad=int(edad)
-    def __str__(self):
-        print(self.nombres)
 def hablar(argumento):
-    argumento=("Hola, Alvaro es una papita")
-    print("hola")    
-    print(argumento) 
+    argumento=("aaaaaaa")
+    print(argumento)
+    return argumento
+
+
 
 
 

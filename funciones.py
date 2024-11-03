@@ -20,7 +20,17 @@ def depositarDinero(saldo):
                 break
         except:
             pass
-    
     saldo += deposito
+    print(f'Saldo actual: S/ {saldo}')
 
+def retirarDinero(saldo):
+    while True:
+        retiro = input("Ingrese el monto a retirar: ")
+        try:
+            retiro = float(retiro)
+            if retiro > 0 and retiro<=saldo:
+                break
+        except:
+            pass
+    saldo -= retiro
     print(f'Saldo actual: S/ {saldo}')
