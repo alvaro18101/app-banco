@@ -25,3 +25,5 @@ def obtenerAtributos(usuarios, dato):
 nombres = obtenerAtributos(usuarios, 'nombre')
 numeros_cuentas = obtenerAtributos(usuarios, 'numero_cuenta')
 contraseñas = obtenerAtributos(usuarios, 'contraseña')
+
+# Guardado de datos en un .xlsx o .csv

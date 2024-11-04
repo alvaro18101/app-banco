@@ -2,14 +2,12 @@ from datos import numeros_cuentas
 from datos import contraseñas
 
 def iniciarSesion():
-    cuenta = input("Ingrese usario: ")
+    cuenta = input("Ingrese número de cuenta: ")
     contraseña = input("Ingrese contraseña: ")
     if (cuenta in numeros_cuentas) == False or (contraseña in contraseñas) == False:
-        print("Datos Incorrectos")
-        return False
+        return (False, 0)
     else:
-        print("Ingreso exitoso")
-        return True
+        return (True, cuenta)
 
 def depositarDinero(saldo):
     while True:
