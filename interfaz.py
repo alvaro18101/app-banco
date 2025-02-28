@@ -15,16 +15,44 @@ while True:
     except:
         pass
 
-validacion, cuenta = funciones.iniciarSesion()
-while numero == 1 and validacion == False:
-    print('Datos incorrectos')    
+if numero == 1:
+    # iniciar sesion    
     validacion, cuenta = funciones.iniciarSesion()
-else:
-    print('Estás dentro de tu sesión')
-    print(f'Bienvenido {cuenta}')
+    while validacion == False:
+        print('Datos incorrectos')    
+        validacion, cuenta = funciones.iniciarSesion()
+    else:
+        print('Estás dentro de tu sesión')
+        print(f'Bienvenido {cuenta}')
+        print('\t1. Depositar dinero')
+        print('\t2. Retirar dinero')
+        print('\t3. Transferir dinero')
+        while True:
+            numero2 = input('Presione un número del menú: ')
+            try:
+                numero2 = int(numero)
+                if numero2 in range(1,4):
+                    break
+            except:
+                pass
+        
+        if numero2 == 1:
+            # Depositar dinero
+            funciones.depositarDinero()
+        
+        # if numero2 == 2:
+        #     # retirar dinero
+            
+        
+        # if numero2 == 3:
+        #     # transferir dinero
+            
+
 
 # if numero == 2:
+#     # crear cuenta
 #     app.nuevoUsuario()
 
 # if numero 3:
+#     # recuperar contraseña
 #     app.cambiarContraseña()

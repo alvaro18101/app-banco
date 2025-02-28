@@ -1,5 +1,8 @@
 from datos import numeros_cuentas
 from datos import contraseñas
+from datos import usuarios
+
+print(usuarios[0].numero_cuenta)
 
 def iniciarSesion():
     cuenta = input("Ingrese número de cuenta: ")
