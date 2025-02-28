@@ -1,16 +1,14 @@
-from datos import numeros_cuentas
-from datos import contraseñas
 from datos import usuarios
-
-print(usuarios[0].numero_cuenta)
 
 def iniciarSesion():
     cuenta = input("Ingrese número de cuenta: ")
     contraseña = input("Ingrese contraseña: ")
-    if (cuenta in numeros_cuentas) == False or (contraseña in contraseñas) == False:
-        return (False, 0)
-    else:
-        return (True, cuenta)
+    for usuario in usuarios:
+        if cuenta == usuario.numero_cuenta:
+            if contraseña == usuario.contraseña:
+                return (True, usuario)
+            else:
+                return (False, 0)
 
 def depositarDinero(saldo):
     while True:

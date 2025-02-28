@@ -16,14 +16,14 @@ while True:
         pass
 
 if numero == 1:
-    # iniciar sesion    
+    # iniciar sesion
     validacion, cuenta = funciones.iniciarSesion()
     while validacion == False:
         print('Datos incorrectos')    
         validacion, cuenta = funciones.iniciarSesion()
     else:
         print('Estás dentro de tu sesión')
-        print(f'Bienvenido {cuenta}')
+        print(f'Bienvenido {cuenta.nombre.split(' ')[0]}')
         print('\t1. Depositar dinero')
         print('\t2. Retirar dinero')
         print('\t3. Transferir dinero')
@@ -38,7 +38,7 @@ if numero == 1:
         
         if numero2 == 1:
             # Depositar dinero
-            funciones.depositarDinero()
+            funciones.depositarDinero(cuenta.saldo)
         
         # if numero2 == 2:
         #     # retirar dinero
