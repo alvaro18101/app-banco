@@ -53,6 +53,6 @@ if numero == 1:
 #     # crear cuenta
 #     app.nuevoUsuario()
 
-# if numero 3:
-#     # recuperar contraseña
-#     app.cambiarContraseña()
+if numero == 3:
+    # recuperar contraseña
+    numero_cuenta = input('Ingresa el número de cuenta: ')
